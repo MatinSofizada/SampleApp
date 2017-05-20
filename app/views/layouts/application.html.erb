@@ -2,13 +2,39 @@
 <html>
 <head>
   <title>SampleApp</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width-device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              <li><a href="/static_pages/index">HOME</a></li>
+              <li><a href="/static_pages/about">ABOUT</a></li>
+              <li><a href="/static_pages/contact">CONTACT US</a></li>
+          </ul>
+        </div>
+      </div>
 
+    </nav>
+    <br/>
+    <br/>
 <%= yield %>
-
+<footer class="footer">
+      <div class="container">
+        <p class="text-muted">&copy; 205 Bike Berlin</p>
+      </div>
+    </footer>
 </body>
 </html>
